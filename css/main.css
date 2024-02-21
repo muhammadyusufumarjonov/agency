@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-family: "Inter";
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1076px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header.header {
+  position: relative;
+}
+header.header .Ellipse1 {
+  position: absolute;
+  z-index: -1;
+}
+header.header .container nav {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+header.header .container nav .header-nav-logo {
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+header.header .container nav .header-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+header.header .container nav .header-nav__list .header-nav__list-item a {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #272D38;
+  text-transform: capitalize;
+  transition: 0.2s ease-in-out;
+}
+header.header .container nav .header-nav__list .header-nav__list-item a:hover {
+  color: #8EADD5;
+}
+header.header .container .hero {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+header.header .container .hero .left .title {
+  width: 540px;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+header.header .container .hero .left .desc {
+  text-transform: capitalize;
+  width: 525px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+header.header .container .hero .left .btn {
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 600;
+  padding: 12px 40px;
+  color: #fff;
+  background-color: #8EADD5;
+  border: 3px solid #8EADD5;
+  transition: 0.25s ease-in-out;
+}
+header.header .container .hero .left .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+main {
+  position: relative;
+}
+main .container .companies {
+  margin-top: 120px;
+}
+main .container .companies .title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  color: #667085;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .container .companies .logos-list {
+  margin-bottom: 200px;
+  padding: 10px 0px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 130px;
+}
+main .container .companies .wrapper {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+main .container .companies .wrapper .right .wrapper-title {
+  width: 435px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 26px;
+}
+main .container .companies .wrapper .right .wrapper-desc {
+  width: 392px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #272D38;
+  margin-bottom: 40px;
+}
+main .container .companies .wrapper .right .Arrow {
+  transition: 0.25s ease-in-out;
+}
+main .container .companies .wrapper .right .Arrow:hover {
+  transform: translateX(10px);
+}
+main .container .companies .ellipse2 {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  z-index: -1;
+}
+main .container .testmonial {
+  margin-top: 180px;
+}
+main .container .testmonial .subtitle {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #272D38;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+}
+main .container .testmonial .title {
+  width: 435px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #272D38;
+  text-align: center;
+  margin-left: 340px;
+  margin-bottom: 35px;
+}
+main .container .testmonial .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+main .container .testmonial .cards .card {
+  border-radius: 10px;
+  width: 345px;
+  padding: 14px 25px;
+  background-color: rgba(222, 220, 219, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease-in-out;
+}
+main .container .testmonial .cards .card:hover {
+  background-color: #8EADD5;
+}
+main .container .testmonial .cards .card .ava {
+  margin-bottom: 14px;
+}
+main .container .testmonial .cards .card .name {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #272D38;
+  margin-bottom: 30px;
+}
+main .container .testmonial .cards .card .job {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  width: 281px;
+  text-align: center;
+  color: #272D38;
+}
+main .container .contact {
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+main .container .contact .right .title {
+  width: 361px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #272D38;
+  margin-bottom: 20px;
+}
+main .container .contact .right .desc {
+  width: 360px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #272D38;
+  margin-bottom: 16px;
+}
+main .container .contact .right .btn {
+  width: 187px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 600;
+  padding: 12px 40px;
+  color: #fff;
+  background-color: #8EADD5;
+  border: 3px solid #8EADD5;
+  transition: 0.25s ease-in-out;
+}
+main .container .contact .right .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer {
+  padding-top: 40px;
+  margin-top: 150px;
+  background-color: #f0f0f0;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: self-start;
+  justify-content: space-between;
+}
+.footer .container .left .footer-logo {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #000;
+}
+.footer .container .left .desc {
+  margin-top: 30px;
+  width: 189px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #272D38;
+}
+.footer .container ul {
+  margin-bottom: 50px;
+}
+.footer .container ul .title {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+}
+.footer .container ul li {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 30px;
+  transition: 0.25s ease-in-out;
+}
+.footer .container ul li a:hover {
+  color: red;
+}
+.footer .bottom-desc {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  color: #272D38;
+  text-align: center;
+  padding-bottom: 40px;
+}
