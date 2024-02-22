@@ -1,14 +1,73 @@
 header.header{
     position: relative;
     .Ellipse1{
+        width: 600px;
         position: absolute;
         z-index: -1;
+        @include media(620px){
+            width: 500px;
+        }
+        @include media(514px){
+            width: 400px;
+        }
+        @include media(420px){
+            width: 300px;
+        }
     }
     .container{
         nav{
             padding-top: 40px;
             @include flex;
             justify-content: space-between;
+            .hamburger{
+                display: none;
+                @include media(540px){
+                    display: block;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            @include media(1130px){
+                justify-content: center;
+                gap: 420px;
+            }
+            @include media(1030px){
+                gap: 400px;
+            }
+            @include media(980px){
+                gap: 350px;
+            }
+            @include media(940px){
+                gap: 300px;
+            }
+            @include media(900px){
+                gap: 260px;
+            }
+            @include media(870px){
+                gap: 140px;
+            }
+            @include media(730px){
+                gap: 80px;
+            }
+            @include media(680px){
+                gap: 40px;
+            }
+            @include media(570px){
+                gap: 25px;
+            }
+            @include media(540px){
+                gap: 280px;
+            }
+            @include media(522px){
+                gap: 250px;
+            }
+            @include media(480px){
+                gap: 180px;
+            }
+            @include media(410px){
+                gap: 130px;
+            }
             .header-nav-logo{
                 font-family: 'Inter';
                 @include font(20,24,700);
@@ -18,6 +77,15 @@ header.header{
             .header-nav__list{
                 @include flex;
                 gap: 40px;
+                @include media(640px){
+                    gap: 20px;
+                }
+                @include media(570px){
+                    gap: 10px;
+                }
+                @include media(540px){
+                    display: none;
+                }
                 .header-nav__list-item{
                     a{
                         font-family: 'Inter';
@@ -36,18 +104,91 @@ header.header{
             margin-top: 90px;
             @include flex;
             justify-content: space-between;
+            @include media(1130px){
+                justify-content: center;
+            }
+            @include media(940px){
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
             .left{
                 .title{
                     width: 540px;
                     @include font(64,64,700);
                     color: #000;
                     margin-bottom: 24px;
+                    @include media(1130px){
+                        @include font(60,60,700);
+                    }
+                    @include media(1030px){
+                        width: 480px;
+                        @include font(50,50,700);
+                    }
+                    @include media(980px){
+                        width: 440px;
+                        @include font(45,40,600);
+                    }
+                    @include media(940px){
+                        width: 650px;
+                        @include font(50,50,600);
+                    }
+                    @include media(720px){
+                        width: 550px;
+                        @include font(40,40,600);
+                    }
+                    @include media(580px){
+                        width: 450px;
+                        @include font(30,30,600);
+                        text-align: center;
+                    }
+                    @include media(480px){
+                        width: 400px;
+                        @include font(25,20,600);
+                        text-align: center;
+                    }
+                    @include media(420px){
+                        width: 350px;
+                        @include font(30,30,600);
+                        text-align: center;
+                    }
+                    @include media(370px){
+                        width: 300px;
+                        @include font(30,25,600);
+                        text-align: center;
+                    }
                 }
                 .desc{
                     text-transform: capitalize;
                     width: 525px;
                     @include font(18,27,400);
                     margin-bottom: 40px;
+                    @include media(1130px){
+                        @include font(16,25,400);
+                    }
+                    @include media(1030px){
+                        width: 420px;
+                        @include font(18,25,400);
+                    }
+                    @include media(940px){
+                        width: 550px;
+                        @include font(20,25,400);
+                    }
+                    @include media(580px){
+                        width: 450px;
+                        @include font(18,20,400);
+                        text-align: center;
+                    }
+                    @include media(480px){
+                        width: 350px;
+                        @include font(18,20,400);
+                        text-align: center;
+                    }
+                    @include media(370px){
+                        width: 300px;
+                        @include font(18,20,400);
+                        text-align: center;
+                    }
                 }
                 .btn{
                     border-radius: 12px;
@@ -57,6 +198,39 @@ header.header{
                     background-color: #8EADD5;
                     border: 3px solid #8EADD5;
                     transition: .25s ease-in-out;
+                    @include media(940px){
+                        display: none;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+            .right{
+                gap: 30px;
+                display: flex;
+                flex-direction: column;
+                img{
+                    @include media(480px){
+                        width: 380px;
+                    }
+                    @include media(400px){
+                        width: 300px;
+                    }
+                }
+                .btn{
+                    display: none;
+                    border-radius: 12px;
+                    @include font(16,27,600);
+                    padding: 12px 40px;
+                    color: #fff;
+                    background-color: #8EADD5;
+                    border: 3px solid #8EADD5;
+                    transition: .25s ease-in-out;
+                    @include media(940px){
+                        display: block;
+                    }
                     &:hover{
                         background-color: #fff;
                         color: #000;
@@ -71,12 +245,19 @@ main{
     position: relative;
     .container{
         .companies{
+            overflow: hidden;
             margin-top: 120px;
             .title{
                 @include font(16,16,300);
                 color: #667085;
                 margin-bottom: 20px;
                 text-align: center
+            }
+            marquee{
+                display: none;
+                @include media(730px){
+                    display: block;
+                }
             }
             .logos-list{
                 margin-bottom: 200px;
@@ -86,31 +267,150 @@ main{
                 border-radius: 8px;
                 @include flex;
                 gap: 130px;
+                @include media(1130px){
+                    gap: 120px;
+                }
+                @include media(940px){
+                    gap: 80px;
+                }
+                @include media(780px){
+                    gap: 50px;
+                }
+                @include media(730px){
+                    gap: 30px;
+                }
+                @include media(640px){
+                    gap: 15px;
+                }
+                @include media(515px){
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                    background-color: #fff;
+                }
+                @include media(580px){
+                    img{
+                        width: 110px;
+                    }
+                }
+                @include media(370px){
+                    margin-bottom: 10px;
+                }
             }
 
             .wrapper{
                 margin-top: 120px;
                 @include flex;
                 justify-content: space-between;
+                @include media(1130px){
+                    justify-content: center;
+                    gap: 150px;
+                }
+                @include media(1080px){
+                    justify-content: center;
+                    gap: 100px;
+                }
+                @include media(900px){
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
                 .right{
                     .wrapper-title{
                         width: 435px;
                         @include font(48,48,700);
                         color: #000;
                         margin-bottom: 26px;
+                        @include media(1030px){
+                            width: 350px;
+                            @include font(40,40,600);
+                        }
+                        @include media(980px){
+                            width: 340px;
+                            @include font(40,40,600);
+                        }
+                        @include media(940px){
+                            width: 320px;
+                            @include font(40,40,600);
+                        }
+                        @include media(900px){
+                            width: 520px;
+                            @include font(40,40,600);
+                        }
+                        @include media(560px){
+                            width: 450px;
+                            @include font(35,35,500);
+                        }
+                        @include media(480px){
+                            width: 380px;
+                            @include font(30,30,500);
+                        }
+                        @include media(400px){
+                            width: 330px;
+                            @include font(28,30,500);
+                        }
                     }
                     .wrapper-desc{
                         width: 392px;
                         @include font(16,27,400);
                         color: #272D38;
                         margin-bottom: 40px;
+                        @include media(980px){
+                            @include font(18,25,400);
+                            width: 360px;
+                        }
+                        @include media(940px){
+                            @include font(18,20,400);
+                            width: 200px;
+                        }
+                        @include media(900px){
+                            @include font(18,20,400);
+                            width: 500px;
+                        }
+                        @include media(560px){
+                            width: 450px;
+                            @include font(17,18,400);
+                        }
+                        @include media(480px){
+                            width: 380px;
+                            @include font(17,18,400);
+                        }
+                        @include media(400px){
+                            width: 330px;
+                            @include font(17,18,400);
+                        }
                     }
                     .Arrow{
                         transition: .25s ease-in-out;
+                        @include media(535px){
+                            margin-left: 200px;
+                            transform: rotate(90deg);
+                        }
+                        @include media(370px){
+                            margin-left: 140px;
+                        }
                     }
                     .Arrow:hover{
                         transform: translateX(10px);
+                        @include media(535px){
+                            transform: translateX(-10px);
+                        }
                     }
+                }
+                .left{
+                    img{
+                        @include media(480px){
+                            width: 380px;
+                        }
+                        @include media(400px){
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+            .wrapper-sc{
+                @include media(900px){
+                    display: flex;
+                    flex-direction: column;
                 }
             }
             .ellipse2{
@@ -137,11 +437,66 @@ main{
                 text-align: center;
                 margin-left: 340px;
                 margin-bottom: 35px;
+                @include media(1030px){
+                    margin-left: 290px;
+                }
+                @include media(940px){
+                    margin-left: 250px;
+                }
+                @include media(850px){
+                    margin-left: 200px;
+                }
+                @include media(750px){
+                    margin-left: 160px;
+                }
+                @include media(720px){
+                    margin-left: 130px;
+                }
+                @include media(650px){
+                    margin-left: 100px;
+                }
+                @include media(580px){
+                    margin-left: 75px;
+                }
+                @include media(550px){
+                    margin-left: 55px;
+                }
+                @include media(515px){
+                    margin-left: 38px;
+                }
+                @include media(495px){
+                    margin-left: 20px;
+                    @include font(30,30,700);
+                }
+                @include media(480px){
+                    width: 345px;
+                    margin-left: 55px;
+                    @include font(25,18,700);
+                }
+                @include media(430px){
+                    margin-left: 30px;
+                }
+                @include media(400px){
+                    margin-left: 10px;
+                }
+                @include media(370px){
+                    @include font(30,25,700);
+                    width: 270px;
+                    margin-left: 45px;
+                }
             }
             .cards{
                 @include flex;
                 justify-content: space-between;
                 margin-bottom: 60px;
+                @include media(1130px){
+                    justify-content: center;
+                    gap: 10px;
+                }
+                @include media(1030px){
+                    gap: 15px;
+                    flex-direction: column;
+                }
                 .card{
                     border-radius: 10px;
                     width: 345px;
@@ -178,18 +533,69 @@ main{
             background-color: #f0f0f0;
             @include flex;
             gap: 100px;
+            @include media(1130px){
+                gap: 90px;
+            }
+            @include media(920px){
+                gap: 50px;
+            }
+            @include media(880px){
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .left{
+                img{
+                    @include media(480px){
+                        width: 380px;
+                    }
+                    @include media(400px){
+                        width: 300px;
+                    }
+                }
+            }
             .right{
                 .title{
                     width: 361px;
                     @include font(48,48,700);
                     color: #272D38;
                     margin-bottom: 20px;
+                    @include media(920px){
+                        width: 380px;
+                        @include font(35,35,700);
+                    }
+                    @include media(900px){
+                        width: 340px;
+                        @include font(30,35,700);
+                    }
+                    @include media(880px){
+                        width: 400px;
+                        @include font(40,45,700);
+                    }
+                    @include media(480px){
+                        width: 300px;
+                        @include font(30,35,700);
+                    }
+                    @include media(370px){
+                        width: 280px;
+                        @include font(28,30,700);
+                    }
                 }
                 .desc{
                     width: 360px;
                     @include font(16,27,400);
                     color: #272D38;
                     margin-bottom: 16px;
+                    @include media(880px){
+                        width: 400px;
+                    }
+                    @include media(480px){
+                        width: 350px;
+                    }
+                    @include media(370px){
+                        width: 300px;
+                        @include font(18,20,400);
+                    }
                 }
                 .btn{
                     width: 187px;
@@ -200,6 +606,9 @@ main{
                     background-color: #8EADD5;
                     border: 3px solid #8EADD5;
                     transition: .25s ease-in-out;
+                    @include media(880px){
+                        margin-bottom: 30px;
+                    }
                     &:hover{
                         background-color: #fff;
                         color: #000;
@@ -218,7 +627,17 @@ main{
         @include flex;
         align-items: self-start;
         justify-content: space-between;
+        @include media(1130px){
+            justify-content: space-around;
+        }
+        @include media(620px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
         .left{
+            text-align: center;
             .footer-logo{
                 font-family: 'Inter';
                 @include font(18,27,700);
@@ -232,6 +651,7 @@ main{
             }
         }
         ul{
+            text-align: center;
             margin-bottom: 50px;
             .title{
                 @include font(18,27,700);
